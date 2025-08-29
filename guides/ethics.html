@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ethics — RoadToCFA</title>
+  <meta name="description" content="CFA Code of Ethics & Standards of Professional Conduct — concise explanations, examples, and quick reference (incl. GIPS basics).">
+  <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    /* Headings */
+    h2 { font-size: 1.6rem; font-weight: 800; margin-top: 1.5rem; }
+    h3 { font-size: 1.25rem; font-weight: 700; margin-top: 1rem; }
+    p, li { line-height: 1.55; }
+
+    /* Topics navigation */
+    .toc { margin: 1.2rem 0 1.4rem; padding: .9rem 1rem; border: 1px solid var(--border); border-radius: .6rem; background: var(--panel); }
+    .toc-title { font-size: 1.2rem; font-weight: 800; margin-bottom: .5rem; }
+    .toc ul { list-style: none; margin: 0; padding: 0; }
+    .toc li { margin: .35rem 0; }
+    .toc a { font-size: 1.1rem; font-weight: 650; text-decoration: none; }
+    .toc a:hover { text-decoration: underline; text-underline-offset: 2px; }
+
+    /* Clickable term links */
+    .term { text-decoration: underline; text-underline-offset: 2px; }
+    :target { scroll-margin-top: 80px; }
+  </style>
+</head>
+<body>
+  <a id="top"></a>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a class="logo" href="../index.html">RoadToCFA</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="menu">☰</button>
+      <ul id="menu" class="menu">
+        <li><a href="../index.html#guides">Guides</a></li>
+        <li><a href="../notes/index.html">Equity Notes</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container section">
+    <h1>Ethics</h1>
+    <p>This page summarises the CFA Institute <strong>Code of Ethics</strong> and <strong>Standards of Professional Conduct</strong> with plain-English explanations and practical “do/don’t” guidance.</p>
+    <p><strong>Disclaimer:</strong> Educational summary only — not a substitute for the official CFA curriculum or Standards of Practice Handbook.</p>
+
+    <!-- KEY TO TERMS -->
+    <section id="terms">
+      <h2>Key to Terms</h2>
+      <ul>
+        <li id="term-independence"><strong>Independence & Objectivity</strong> — Avoid influences (gifts, comp, pressure) that bias research/actions.</li>
+        <li id="term-misrepresentation"><strong>Misrepresentation</strong> — Misleading claims about services, qualifications, or using others’ work without credit.</li>
+        <li id="term-misconduct"><strong>Misconduct</strong> — Dishonest/fraudulent behavior reflecting poorly on professional integrity.</li>
+        <li id="term-knowledge-law"><strong>Knowledge of the Law</strong> — Follow whichever is stricter: law, regulation, or CFA Standards.</li>
+        <li id="term-mnpi"><strong>Material Nonpublic Info (MNPI)</strong> — Info a reasonable investor would find important but isn’t public.</li>
+        <li id="term-mosaic"><strong>Mosaic Theory</strong> — Combining public + non-material nonpublic info = OK.</li>
+        <li id="term-fair-dealing"><strong>Fair Dealing</strong> — Equal treatment in investment recommendations/trade allocation.</li>
+        <li id="term-suitability"><strong>Suitability</strong> — Investments must fit client objectives, constraints, risk profile.</li>
+        <li id="term-best-exec"><strong>Best Execution</strong> — Most favorable execution for clients considering cost and quality.</li>
+        <li id="term-soft-dollars"><strong>Soft Dollars</strong> — Brokerage benefits must benefit the client, not the firm/manager personally.</li>
+        <li id="term-confidentiality"><strong>Confidentiality</strong> — Protect client info unless law requires disclosure or client permits.</li>
+        <li id="term-addl-comp"><strong>Additional Compensation</strong> — Must disclose/obtain employer consent before accepting extra benefits.</li>
+        <li id="term-supervisors"><strong>Supervisors’ Duties</strong> — Reasonable compliance systems to prevent violations.</li>
+        <li id="term-diligence"><strong>Diligence & Reasonable Basis</strong> — Thorough, well-supported research and recommendations.</li>
+        <li id="term-communication"><strong>Communication with Clients</strong> — Distinguish fact vs opinion; disclose assumptions/risks.</li>
+        <li id="term-records"><strong>Record Retention</strong> — Keep research/client records as required.</li>
+        <li id="term-priority"><strong>Priority of Transactions</strong> — Clients first, employer second, personal trades last.</li>
+        <li id="term-referral"><strong>Referral Fees</strong> — Disclose referral compensation arrangements to all parties.</li>
+        <li id="term-cfa-ref"><strong>CFA References</strong> — Correct use of CFA marks (“CFA charterholder” not “CFA certified”).</li>
+        <li id="term-gips"><strong>GIPS</strong> — Global standards for fair, comparable investment performance reporting.</li>
+      </ul>
+    </section>
+
+    <!-- TOPICS -->
+    <nav class="toc" aria-label="Topics on this page">
+      <div class="toc-title">Topics</div>
+      <ul>
+        <li><a href="#code-ethics">Code of Ethics</a></li>
+        <li><a href="#standards-overview">Standards — Overview</a></li>
+        <li><a href="#professionalism">I. Professionalism</a></li>
+        <li><a href="#capital-markets">II. Capital Markets</a></li>
+        <li><a href="#clients">III. Duties to Clients</a></li>
+        <li><a href="#employers">IV. Duties to Employers</a></li>
+        <li><a href="#investment-analysis">V. Investment Analysis</a></li>
+        <li><a href="#conflicts">VI. Conflicts of Interest</a></li>
+        <li><a href="#members-candidates">VII. Members & Candidates</a></li>
+        <li><a href="#gips">GIPS Basics</a></li>
+        <li><a href="#ethics-practice">Ethics-in-Practice Framework</a></li>
+      </ul>
+    </nav>
+
+    <!-- CODE OF ETHICS -->
+    <section id="code-ethics">
+      <h2>Code of Ethics</h2>
+      <p>Broad principles guiding ethical conduct in investment practice.</p>
+      <ul>
+        <li>Act with <strong>integrity, competence, diligence, respect, and ethics</strong>.</li>
+        <li>Place clients’ and profession’s integrity above personal interests.</li>
+        <li>Exercise care and independent judgment.</li>
+        <li>Promote integrity and viability of capital markets.</li>
+        <li>Maintain and improve professional competence.</li>
+      </ul>
+    </section>
+
+    <!-- STANDARDS OVERVIEW -->
+    <section id="standards-overview">
+      <h2>Standards — Overview</h2>
+      <p>Seven standards of professional conduct; know structure and pitfalls.</p>
+      <ol>
+        <li><strong>I. Professionalism</strong></li>
+        <li><strong>II. Capital Markets Integrity</strong></li>
+        <li><strong>III. Duties to Clients</strong></li>
+        <li><strong>IV. Duties to Employers</strong></li>
+        <li><strong>V. Investment Analysis</strong></li>
+        <li><strong>VI. Conflicts of Interest</strong></li>
+        <li><strong>VII. Members & Candidates</strong></li>
+      </ol>
+    </section>
+
+    <!-- Each Standard follows (I–VII) -->
+    <section id="professionalism">
+      <h2>I. Professionalism</h2>
+      <h3><a class="term" href="#term-knowledge-law">Knowledge of the Law</a></h3>
+      <p>Follow the stricter of law, regulation, or CFA Standards.</p>
+      <h3><a class="term" href="#term-independence">Independence & Objectivity</a></h3>
+      <p>Avoid biased research from gifts/pressure; pre-clear issuer-paid travel, research perks.</p>
+      <h3><a class="term" href="#term-misrepresentation">Misrepresentation</a></h3>
+      <p>No plagiarism, false claims, or misleading qualifications.</p>
+      <h3><a class="term" href="#term-misconduct">Misconduct</a></h3>
+      <p>No dishonesty, fraud, or behavior harming professional integrity.</p>
+    </section>
+
+    <section id="capital-markets">
+      <h2>II. Integrity of Capital Markets</h2>
+      <h3><a class="term" href="#term-mnpi">Material Nonpublic Info (MNPI)</a></h3>
+      <p>No trading on MNPI; mosaic theory permitted.</p>
+      <h3>Market Manipulation</h3>
+      <p>No false rumors or manipulative trades (pump-and-dump, wash trades).</p>
+    </section>
+
+    <section id="clients">
+      <h2>III. Duties to Clients</h2>
+      <h3>Loyalty, Prudence & Care</h3>
+      <p>Act for client benefit; ensure best execution; use soft dollars for client’s benefit only.</p>
+      <h3><a class="term" href="#term-fair-dealing">Fair Dealing</a></h3>
+      <p>Distribute recommendations/trades fairly; no selective disclosure.</p>
+      <h3><a class="term" href="#term-suitability">Suitability</a></h3>
+      <p>Know your client; match investments to IPS and risk tolerance.</p>
+      <h3>Performance Presentation</h3>
+      <p>Present results fairly and accurately; avoid cherry-picking.</p>
+      <h3><a class="term" href="#term-confidentiality">Confidentiality</a></h3>
+      <p>Keep client info private unless law requires disclosure.</p>
+    </section>
+
+    <section id="employers">
+      <h2>IV. Duties to Employers</h2>
+      <h3>Loyalty</h3>
+      <p>Act in employer’s best interest; no stealing clients/secrets before leaving.</p>
+      <h3><a class="term" href="#term-addl-comp">Additional Compensation</a></h3>
+      <p>Get written consent before accepting extra benefits.</p>
+      <h3><a class="term" href="#term-supervisors">Supervisors’ Duties</a></h3>
+      <p>Implement and enforce compliance; investigate violations.</p>
+    </section>
+
+    <section id="investment-analysis">
+      <h2>V. Investment Analysis</h2>
+      <h3><a class="term" href="#term-diligence">Diligence & Basis</a></h3>
+      <p>Thorough research with reasonable basis; use reliable sources.</p>
+      <h3><a class="term" href="#term-communication">Communication</a></h3>
+      <p>Distinguish fact vs opinion; disclose methods, risks, assumptions.</p>
+      <h3><a class="term" href="#term-records">Record Retention</a></h3>
+      <p>Maintain research and client records per rules.</p>
+    </section>
+
+    <section id="conflicts">
+      <h2>VI. Conflicts of Interest</h2>
+      <h3>Disclosure</h3>
+      <p>Fully disclose conflicts that may impair duty to clients.</p>
+      <h3><a class="term" href="#term-priority">Priority of Transactions</a></h3>
+      <p>Clients first, employer second, personal trades last.</p>
+      <h3><a class="term" href="#term-referral">Referral Fees</a></h3>
+      <p>Disclose referral arrangements clearly.</p>
+    </section>
+
+    <section id="members-candidates">
+      <h2>VII. Members & Candidates</h2>
+      <h3>Conduct in CFA Program</h3>
+      <p>Follow exam rules; don’t compromise integrity.</p>
+      <h3><a class="term" href="#term-cfa-ref">References to CFA</a></h3>
+      <p>Correct usage: “CFA charterholder,” “Passed CFA Level X”; avoid “CFA certified.”</p>
+    </section>
+
+    <section id="gips">
+      <h2>GIPS Basics</h2>
+      <p><a class="term" href="#term-gips">Global Investment Performance Standards</a> ensure fair, comparable reporting.</p>
+      <ul>
+        <li>Firm-wide; must comply with all rules if claiming compliance.</li>
+        <li>Composites group similar portfolios.</li>
+        <li>Use consistent data (e.g., time-weighted returns).</li>
+        <li>Disclose required items (benchmarks, fees, dispersion, etc.).</li>
+        <li>Verification: optional, firm-wide by an independent party.</li>
+      </ul>
+    </section>
+
+    <section id="ethics-practice">
+      <h2>Ethics-in-Practice Framework</h2>
+      <p>Checklist for ethical decision-making:</p>
+      <ol>
+        <li>Identify facts and stakeholders.</li>
+        <li>Which Standards apply?</li>
+        <li>Any conflicts or pressures?</li>
+        <li>What duties (loyalty, confidentiality, suitability) are involved?</li>
+        <li>Follow stricter rule of law, regulation, or Standards.</li>
+        <li>Choose option that protects clients/market integrity.</li>
+        <li>Dissociate and escalate if necessary.</li>
+      </ol>
+      <p><a href="#top">↑ Back to top</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 RoadToCFA.</p>
+    </div>
+  </footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>

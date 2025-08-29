@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quantitative Methods — RoadToCFA</title>
+  <meta name="description" content="Quantitative Methods quick reference: returns, TVM, NPV/IRR, statistics, probability, distributions, sampling, estimation, hypothesis testing. Helpful even if your course is A-Level Statistics.">
+  <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    /* Headings */
+    h2 { font-size: 1.6rem; font-weight: 800; margin-top: 1.5rem; }
+    h3 { font-size: 1.25rem; font-weight: 700; margin-top: 1rem; }
+    p, li { line-height: 1.55; }
+
+    /* Topics navigation */
+    .toc { margin: 1.2rem 0 1.4rem; padding: .9rem 1rem; border: 1px solid var(--border); border-radius: .6rem; background: var(--panel); }
+    .toc-title { font-size: 1.2rem; font-weight: 800; margin-bottom: .5rem; }
+    .toc ul { list-style: none; margin: 0; padding: 0; }
+    .toc li { margin: .35rem 0; }
+    .toc a { font-size: 1.1rem; font-weight: 650; text-decoration: none; }
+    .toc a:hover { text-decoration: underline; text-underline-offset: 2px; }
+
+    /* Symbol links */
+    .sym { text-decoration: underline; text-underline-offset: 2px; }
+    :target { scroll-margin-top: 80px; }
+  </style>
+</head>
+<body>
+  <a id="top"></a>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a class="logo" href="../index.html">RoadToCFA</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="menu">☰</button>
+      <ul id="menu" class="menu">
+        <li><a href="../index.html#guides">Guides</a></li>
+        <li><a href="../notes/index.html">Equity Notes</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container section">
+    <h1>Quantitative Methods</h1>
+    <p><em>Note:</em> This page is useful for anyone wanting to learn these concepts.  
+    An excellent external resource is <a href="https://mrshodgettsstatistics.com/" target="_blank">MrsHodgettsStatistics.com</a> — even though it is written for A-Level Statistics, the explanations and worked examples overlap closely with the same core topics.</p>
+    <p>This guide provides concise explanations and formulas you’ll actually use in exams and modelling. Click any symbol to jump to its definition.</p>
+
+    <!-- KEY TO VARIABLES -->
+    <section id="variables">
+      <h2>Key to Variables</h2>
+      <ul>
+        <li id="variables-pv"><strong>PV</strong> — Present Value</li>
+        <li id="variables-fv"><strong>FV</strong> — Future Value</li>
+        <li id="variables-c"><strong>C</strong> — Cash flow per period</li>
+        <li id="variables-r"><strong>r</strong> — Interest or discount rate per period</li>
+        <li id="variables-n"><strong>n</strong> — Number of periods</li>
+        <li id="variables-d"><strong>D</strong> — Dividends or distributions</li>
+        <li id="variables-p0"><strong>P0</strong> — Initial price</li>
+        <li id="variables-p1"><strong>P1</strong> — Ending price</li>
+        <li id="variables-sigma"><strong>σ</strong> — Standard deviation (volatility)</li>
+        <li id="variables-mu"><strong>μ</strong> — Mean (expected value)</li>
+        <li id="variables-xbar"><strong>x̄</strong> — Sample mean</li>
+        <li id="variables-s"><strong>s</strong> — Sample standard deviation</li>
+        <li id="variables-rho"><strong>ρ</strong> — Correlation coefficient (−1 to +1)</li>
+        <li id="variables-cov"><strong>Cov</strong> — Covariance</li>
+        <li id="variables-w1w2"><strong>w1, w2</strong> — Weights (portfolio/series)</li>
+        <li id="variables-alpha"><strong>α</strong> — Significance level (e.g., 0.05)</li>
+        <li id="variables-pval"><strong>p-value</strong> — Probability of result as extreme as observed if H0 is true</li>
+      </ul>
+    </section>
+
+    <!-- TOPICS -->
+    <nav class="toc" aria-label="Topics on this page">
+      <div class="toc-title">Topics</div>
+      <ul>
+        <li><a href="#returns">Returns & Averages</a></li>
+        <li><a href="#tvm">Time Value of Money</a></li>
+        <li><a href="#npv-irr">NPV & IRR</a></li>
+        <li><a href="#stats">Descriptive Statistics</a></li>
+        <li><a href="#probability">Probability</a></li>
+        <li><a href="#distributions">Distributions</a></li>
+        <li><a href="#cov-corr">Covariance & Correlation</a></li>
+        <li><a href="#sampling">Sampling & Estimation</a></li>
+        <li><a href="#hypothesis">Hypothesis Testing</a></li>
+      </ul>
+    </nav>
+
+    <!-- RETURNS -->
+    <section id="returns">
+      <h2>Returns & Averages</h2>
+      <p>Measures of investment performance. Used to summarise returns across time or assets.</p>
+      <ul>
+        <li><strong>Holding Period Return:</strong> (<a class="sym" href="#variables-p1">P1</a> − <a class="sym" href="#variables-p0">P0</a> + <a class="sym" href="#variables-d">D</a>) ÷ <a class="sym" href="#variables-p0">P0</a></li>
+        <li><strong>Arithmetic mean:</strong> Simple average of returns</li>
+        <li><strong>Geometric mean:</strong> Compounded average (more accurate over time)</li>
+        <li><strong>Coefficient of Variation:</strong> Risk per unit of return = <a class="sym" href="#variables-sigma">σ</a> ÷ mean</li>
+      </ul>
+    </section>
+
+    <!-- TVM -->
+    <section id="tvm">
+      <h2>Time Value of Money (TVM)</h2>
+      <p>Money has a time value: cash today is worth more than cash in the future.</p>
+      <ul>
+        <li><strong>Future Value:</strong> <a class="sym" href="#variables-fv">FV</a> = <a class="sym" href="#variables-pv">PV</a>(1 + <a class="sym" href="#variables-r">r</a>)<sup><a class="sym" href="#variables-n">n</a></sup></li>
+        <li><strong>Present Value:</strong> PV = FV ÷ (1 + r)<sup>n</sup></li>
+        <li><strong>Annuity PV:</strong> PV = C × [1 − (1 + r)<sup>−n</sup>] ÷ r</li>
+        <li><strong>Perpetuity PV:</strong> PV = C ÷ r</li>
+      </ul>
+    </section>
+
+    <!-- NPV & IRR -->
+    <section id="npv-irr">
+      <h2>NPV & IRR</h2>
+      <p>Discounted cash flow methods for investment appraisal.</p>
+      <ul>
+        <li><strong>NPV:</strong> Σ [CF<sub>t</sub> ÷ (1 + r)<sup>t</sup>] − initial outlay</li>
+        <li><strong>IRR:</strong> Discount rate that sets NPV = 0</li>
+      </ul>
+    </section>
+
+    <!-- STATS -->
+    <section id="stats">
+      <h2>Descriptive Statistics</h2>
+      <p>Summarise and describe data.</p>
+      <h3>Central Tendency</h3>
+      <ul><li>Mean, Median, Mode</li></ul>
+      <h3>Dispersion</h3>
+      <ul><li>Variance, Standard Deviation (<a class="sym" href="#variables-sigma">σ</a>), Range</li></ul>
+      <h3>Shape</h3>
+      <ul><li>Skewness (asymmetry), Kurtosis (fat/thin tails)</li></ul>
+    </section>
+
+    <!-- PROBABILITY -->
+    <section id="probability">
+      <h2>Probability</h2>
+      <p>Quantifies uncertainty of events.</p>
+      <ul>
+        <li>Addition rule: P(A or B) = P(A) + P(B) − P(A and B)</li>
+        <li>Multiplication: P(A and B) = P(A) × P(B|A)</li>
+        <li>Conditional: P(A|B) = P(A and B) ÷ P(B)</li>
+        <li>Bayes’ theorem updates probabilities with new info</li>
+      </ul>
+    </section>
+
+    <!-- DISTRIBUTIONS -->
+    <section id="distributions">
+      <h2>Distributions</h2>
+      <p>Models of how outcomes are spread.</p>
+      <ul>
+        <li><strong>Normal:</strong> Bell curve, symmetric</li>
+        <li><strong>Binomial:</strong> Fixed trials, two outcomes</li>
+        <li><strong>Poisson:</strong> Counts of rare events</li>
+        <li><strong>t-distribution:</strong> Small samples, fat tails</li>
+      </ul>
+    </section>
+
+    <!-- COV & CORR -->
+    <section id="cov-corr">
+      <h2>Covariance & Correlation</h2>
+      <p>Measure how variables move together.</p>
+      <ul>
+        <li><strong>Covariance:</strong> Joint variability of two series</li>
+        <li><strong>Correlation (ρ):</strong> Standardised, −1 to +1</li>
+      </ul>
+    </section>
+
+    <!-- SAMPLING -->
+    <section id="sampling">
+      <h2>Sampling & Estimation</h2>
+      <p>How we estimate population parameters from samples.</p>
+      <ul>
+        <li>Central Limit Theorem: large samples → mean ~ normal</li>
+        <li>Standard error: σ ÷ √n</li>
+        <li>Confidence intervals: mean ± margin of error</li>
+      </ul>
+    </section>
+
+    <!-- HYPOTHESIS -->
+    <section id="hypothesis">
+      <h2>Hypothesis Testing</h2>
+      <p>Framework for statistical inference.</p>
+      <ul>
+        <li>Null (H0) vs Alternative (H1)</li>
+        <li>Type I error = false positive (α); Type II = false negative (β)</li>
+        <li>Use z-test, t-test, χ², or F depending on data</li>
+        <li>Decision: reject H0 if p-value &lt; α</li>
+      </ul>
+      <p><a href="#top">↑ Back to top</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 RoadToCFA.</p>
+    </div>
+  </footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>
