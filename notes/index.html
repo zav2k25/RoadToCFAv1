@@ -3,37 +3,154 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Equity Notes — RoadToCFA</title>
-  <meta name="description" content="Monthly equity research write-ups with DCF, comps, catalysts and risks.">
+  <title>Research — The Long Game</title>
+  <meta name="description" content="Equity research notes. Company analysis, DCF models, and investment theses.">
   <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .research-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1.5rem;
+    }
+
+    .research-table thead th {
+      text-align: left;
+      padding: 0.5rem 1rem 0.75rem 0;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      border-bottom: 2px solid currentColor;
+      opacity: 0.5;
+    }
+
+    .research-table tbody tr {
+      border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+    }
+
+    .research-table tbody tr:last-child {
+      border-bottom: none;
+    }
+
+    .research-table td {
+      padding: 1rem 1rem 1rem 0;
+      vertical-align: top;
+    }
+
+    .research-table .col-date {
+      white-space: nowrap;
+      font-size: 0.85rem;
+      opacity: 0.6;
+      width: 6rem;
+    }
+
+    .research-table .col-ticker {
+      font-weight: 600;
+      white-space: nowrap;
+      width: 7rem;
+    }
+
+    .research-table .col-sector {
+      font-size: 0.85rem;
+      opacity: 0.6;
+      white-space: nowrap;
+      width: 9rem;
+    }
+
+    .research-table .col-thesis {
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .research-table .col-link {
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .research-table .col-link a {
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .research-table .col-link a:hover {
+      text-decoration: underline;
+    }
+
+    .empty-state {
+      padding: 3rem 0;
+      opacity: 0.5;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 600px) {
+      .research-table .col-sector,
+      .research-table .col-date {
+        display: none;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <nav class="nav container" aria-label="Primary">
-      <a class="logo" href="../index.html">RoadToCFA</a>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="menu">☰</button>
-      <ul id="menu" class="menu">
-        <li><a href="../index.html#guides">Guides</a></li>
-        <li><a href="index.html">Equity Notes</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main class="container">
-    <h1>Equity Research Notes</h1>
-    <p>Educational only — not investment advice.</p>
-    <ul class="notes-list">
-      <li><a href="sample-note.html">Example PLC — Initiation (BUY)</a></li>
+<header class="site-header">
+  <nav class="nav container" aria-label="Primary">
+    <a class="logo" href="../index.html" aria-label="Home">The Long Game</a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="menu">☰</button>
+    <ul id="menu" class="menu">
+      <li><a href="../index.html#frameworks">Frameworks</a></li>
+      <li><a href="index.html">Research</a></li>
+      <li><a href="../index.html#about">About</a></li>
     </ul>
-  </main>
+  </nav>
+  <section class="hero container">
+    <h1>Research</h1>
+    <p>Equity research notes. Each covers a company's business model, financial position, and investment case.</p>
+  </section>
+</header>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© 2025 RoadToCFA.</p>
-      <a href="../sitemap.xml">Sitemap</a>
-    </div>
-  </footer>
-  <script src="../js/main.js"></script>
+<main>
+  <section class="container section">
+
+    <table class="research-table">
+      <thead>
+        <tr>
+          <th class="col-date">Date</th>
+          <th class="col-ticker">Company</th>
+          <th class="col-sector">Sector</th>
+          <th class="col-thesis">Thesis</th>
+          <th class="col-link"></th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <!-- Add new rows here following this pattern:
+
+        <tr>
+          <td class="col-date">Jun 2025</td>
+          <td class="col-ticker">NAME (TICK)</td>
+          <td class="col-sector">Sector / Industry</td>
+          <td class="col-thesis">One-line investment thesis here.</td>
+          <td class="col-link"><a href="pdfs/filename.pdf" target="_blank" rel="noopener">PDF ↗</a></td>
+        </tr>
+
+        PDFs should be placed in /notes/pdfs/
+        -->
+
+        <tr>
+          <td colspan="5" class="empty-state">Research notes coming soon.</td>
+        </tr>
+
+      </tbody>
+    </table>
+
+  </section>
+</main>
+
+<footer class="container footer-inner">
+  <p>© 2025 The Long Game.</p>
+</footer>
+
+<script src="../js/main.js"></script>
 </body>
 </html>
