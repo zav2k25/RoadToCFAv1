@@ -3,71 +3,151 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>The Long Game — CFA L1 &amp; Equity Research</title>
-  <meta name="description" content="CFA Level 1 study guides and applied equity research notes. Formerly RoadToCFA.">
-  <meta property="og:title" content="The Long Game — CFA L1 &amp; Equity Research">
-  <meta property="og:description" content="CFA Level 1 study guides and applied equity research notes. Formerly RoadToCFA.">
-  <meta property="og:type" content="website">
-  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <title>Research — The Long Game</title>
+  <meta name="description" content="Equity research notes. Company analysis, DCF models, and investment theses.">
+  <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .research-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1.5rem;
+    }
+
+    .research-table thead th {
+      text-align: left;
+      padding: 0.5rem 1rem 0.75rem 0;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      border-bottom: 2px solid currentColor;
+      opacity: 0.5;
+    }
+
+    .research-table tbody tr {
+      border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+    }
+
+    .research-table tbody tr:last-child {
+      border-bottom: none;
+    }
+
+    .research-table td {
+      padding: 1rem 1rem 1rem 0;
+      vertical-align: top;
+    }
+
+    .research-table .col-date {
+      white-space: nowrap;
+      font-size: 0.85rem;
+      opacity: 0.6;
+      width: 6rem;
+    }
+
+    .research-table .col-ticker {
+      font-weight: 600;
+      white-space: nowrap;
+      width: 7rem;
+    }
+
+    .research-table .col-sector {
+      font-size: 0.85rem;
+      opacity: 0.6;
+      white-space: nowrap;
+      width: 9rem;
+    }
+
+    .research-table .col-thesis {
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .research-table .col-link {
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .research-table .col-link a {
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .research-table .col-link a:hover {
+      text-decoration: underline;
+    }
+
+    .empty-state {
+      padding: 3rem 0;
+      opacity: 0.5;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 600px) {
+      .research-table .col-sector,
+      .research-table .col-date {
+        display: none;
+      }
+    }
+  </style>
 </head>
 <body>
 
 <header class="site-header">
   <nav class="nav container" aria-label="Primary">
+    <a class="logo" href="../index.html" aria-label="Home">The Long Game</a>
     <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="menu">☰</button>
     <ul id="menu" class="menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="#guides">CFA Guides</a></li>
-      <li><a href="notes/index.html">Research</a></li>
-      <li><a href="#about">About</a></li>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../index.html#guides">CFA Guides</a></li>
+      <li><a href="index.html">Research</a></li>
+      <li><a href="../index.html#about">About</a></li>
     </ul>
   </nav>
-
   <section class="hero container">
-    <p class="hero-eyebrow">Equity Research &amp; CFA Level I</p>
-    <h1>The Long Game<br><em>Formerly RoadToCFA</em></h1>
-    <p class="hero-sub">Company analysis, DCF models, and investment notes — alongside CFA Level 1 study guides.</p>
-    <div class="cta-row">
-      <a class="btn" href="notes/index.html">View research</a>
-      <a class="btn btn-secondary" href="#guides">CFA guides</a>
-    </div>
+    <h1>Research</h1>
+    <p>Equity research notes. Each covers a company's business model, financial position, and investment case.</p>
   </section>
 </header>
 
 <main>
-  <section id="guides" class="container section">
-    <h2>CFA Guides</h2>
-    <div class="cards">
-      <a class="card" href="guides/ethics.html">
-        <span class="card-label">01</span>
-        <h3>Ethics</h3>
-        <p>Code &amp; Standards, common pitfalls, quick mnemonics.</p>
-      </a>
-      <a class="card" href="guides/quant.html">
-        <span class="card-label">02</span>
-        <h3>Quant</h3>
-        <p>TVM, probability, distributions, hypothesis tests.</p>
-      </a>
-      <a class="card" href="guides/fra.html">
-        <span class="card-label">03</span>
-        <h3>FRA</h3>
-        <p>3-statement links, ratios, common adjustments.</p>
-      </a>
-      <a class="card" href="guides/corpfin.html">
-        <span class="card-label">04</span>
-        <h3>Corp Fin</h3>
-        <p>WACC, DCF, capital budgeting, project appraisal.</p>
-      </a>
-    </div>
-  </section>
+  <section class="container section">
 
-  <section id="about" class="container section">
-    <h2>About</h2>
-    <p>I'm a penultimate-year Economics student and CFA Level I candidate publishing equity research alongside my exam prep. Each research note starts with a public filing or market catalyst and works through a structured framework: industry context, financial model, and a clear investment thesis. The CFA curriculum informs how I read financial statements and think about valuation — the research is where I apply it.</p>
+    <table class="research-table">
+      <thead>
+        <tr>
+          <th class="col-date">Date</th>
+          <th class="col-ticker">Company</th>
+          <th class="col-sector">Sector</th>
+          <th class="col-thesis">Thesis</th>
+          <th class="col-link"></th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <!-- Add new rows here following this pattern:
+
+        <tr>
+          <td class="col-date">Jun 2025</td>
+          <td class="col-ticker">NAME (TICK)</td>
+          <td class="col-sector">Sector / Industry</td>
+          <td class="col-thesis">One-line investment thesis here.</td>
+          <td class="col-link"><a href="pdfs/filename.pdf" target="_blank" rel="noopener">PDF ↗</a></td>
+        </tr>
+
+        PDFs should be placed in /notes/pdfs/
+        -->
+
+        <tr>
+          <td colspan="5" class="empty-state">Research notes coming soon.</td>
+        </tr>
+
+      </tbody>
+    </table>
+
   </section>
 </main>
 
@@ -75,6 +155,6 @@
   <p>© 2025 The Long Game.</p>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="../js/main.js"></script>
 </body>
 </html>
