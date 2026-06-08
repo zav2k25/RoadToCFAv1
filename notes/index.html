@@ -14,81 +14,108 @@
     .research-table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 1.5rem;
+      margin-top: 0.5rem;
     }
 
     .research-table thead th {
       text-align: left;
-      padding: 0.5rem 1rem 0.75rem 0;
-      font-size: 0.75rem;
+      padding: 0 1rem 0.75rem 0;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
-      border-bottom: 2px solid currentColor;
-      opacity: 0.5;
+      border-bottom: 1px solid var(--border-mid);
+      color: var(--muted);
+      font-weight: 400;
     }
 
     .research-table tbody tr {
-      border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+      border-bottom: 1px solid var(--border);
+      transition: background 0.15s;
     }
 
-    .research-table tbody tr:last-child {
-      border-bottom: none;
+    .research-table tbody tr:hover {
+      background: var(--surface-2);
     }
 
     .research-table td {
-      padding: 1rem 1rem 1rem 0;
-      vertical-align: top;
+      padding: 1.25rem 1rem 1.25rem 0;
+      vertical-align: middle;
     }
 
-    .research-table .col-date {
+    .col-date {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--muted);
       white-space: nowrap;
-      font-size: 0.85rem;
-      opacity: 0.6;
       width: 6rem;
     }
 
-    .research-table .col-ticker {
-      font-weight: 600;
+    .col-ticker {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.8rem;
+      font-weight: 500;
       white-space: nowrap;
-      width: 7rem;
+      width: 8rem;
+      color: var(--text);
     }
 
-    .research-table .col-sector {
-      font-size: 0.85rem;
-      opacity: 0.6;
+    .col-sector {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--muted);
       white-space: nowrap;
-      width: 9rem;
+      width: 10rem;
     }
 
-    .research-table .col-thesis {
-      font-size: 0.9rem;
+    .col-rating {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      white-space: nowrap;
+      width: 5rem;
+    }
+
+    .rating-buy {
+      color: #1a5c38;
+      background: #e8f5ed;
+      padding: 0.2rem 0.5rem;
+      border-radius: 3px;
+      display: inline-block;
+    }
+
+    .col-thesis {
+      font-size: 0.875rem;
+      color: var(--muted);
       line-height: 1.5;
     }
 
-    .research-table .col-link {
+    .col-link {
       text-align: right;
       white-space: nowrap;
+      padding-right: 0;
     }
 
-    .research-table .col-link a {
-      font-size: 0.85rem;
-      font-weight: 600;
+    .col-link a {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.06em;
+      font-weight: 500;
+      color: var(--accent);
       text-decoration: none;
+      border: 1px solid var(--border-mid);
+      padding: 0.3rem 0.7rem;
+      border-radius: 3px;
+      transition: background 0.15s, border-color 0.15s;
     }
 
-    .research-table .col-link a:hover {
-      text-decoration: underline;
+    .col-link a:hover {
+      background: var(--accent-lt);
+      border-color: var(--accent);
     }
 
-    .empty-state {
-      padding: 3rem 0;
-      opacity: 0.5;
-      font-size: 0.95rem;
-    }
-
-    @media (max-width: 600px) {
-      .research-table .col-sector,
-      .research-table .col-date {
+    @media (max-width: 640px) {
+      .col-sector,
+      .col-rating {
         display: none;
       }
     }
@@ -98,7 +125,6 @@
 
 <header class="site-header">
   <nav class="nav container" aria-label="Primary">
-    <a class="logo" href="../index.html" aria-label="Home">The Long Game</a>
     <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="menu">☰</button>
     <ul id="menu" class="menu">
       <li><a href="../index.html">Home</a></li>
@@ -108,46 +134,49 @@
     </ul>
   </nav>
   <section class="hero container">
+    <p class="hero-eyebrow">Equity Research</p>
     <h1>Research</h1>
-    <p>Equity research notes. Each covers a company's business model, financial position, and investment case.</p>
+    <p class="hero-sub">Equity research notes. Each covers a company's business model, financial position, and investment case.</p>
   </section>
 </header>
 
 <main>
   <section class="container section">
-
     <table class="research-table">
       <thead>
         <tr>
           <th class="col-date">Date</th>
           <th class="col-ticker">Company</th>
           <th class="col-sector">Sector</th>
+          <th class="col-rating">Rating</th>
           <th class="col-thesis">Thesis</th>
           <th class="col-link"></th>
         </tr>
       </thead>
       <tbody>
 
-        <!-- Add new rows here following this pattern:
-
         <tr>
-          <td class="col-date">Jun 2025</td>
-          <td class="col-ticker">NAME (TICK)</td>
-          <td class="col-sector">Sector / Industry</td>
-          <td class="col-thesis">One-line investment thesis here.</td>
+          <td class="col-date">Mar 2026</td>
+          <td class="col-ticker">AMZN</td>
+          <td class="col-sector">Technology</td>
+          <td class="col-rating"><span class="rating-buy">BUY</span></td>
+          <td class="col-thesis">AWS reacceleration, advertising flywheel, and Anthropic partnership underpin a $256 price target.</td>
+          <td class="col-link"><a href="pdfs/AMZN_MARCH.pdf" target="_blank" rel="noopener">PDF ↗</a></td>
+        </tr>
+
+        <!-- Add future reports below this line:
+        <tr>
+          <td class="col-date">Mon YYYY</td>
+          <td class="col-ticker">TICK</td>
+          <td class="col-sector">Sector</td>
+          <td class="col-rating"><span class="rating-buy">BUY</span></td>
+          <td class="col-thesis">One-line thesis.</td>
           <td class="col-link"><a href="pdfs/filename.pdf" target="_blank" rel="noopener">PDF ↗</a></td>
         </tr>
-
-        PDFs should be placed in /notes/pdfs/
         -->
-
-        <tr>
-          <td colspan="5" class="empty-state">Research notes coming soon.</td>
-        </tr>
 
       </tbody>
     </table>
-
   </section>
 </main>
 
