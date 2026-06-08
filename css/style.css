@@ -354,3 +354,79 @@ body {
     padding: 3.5rem 0;
   }
 }
+
+/* ─── FEATURED REPORT ─────────────────── */
+.featured-card {
+  display: block;
+  padding: 2rem;
+  background: var(--surface);
+  border: 1px solid var(--border-mid);
+  border-radius: calc(var(--radius) + 3px);
+  text-decoration: none;
+  color: var(--text);
+  max-width: 580px;
+  transition: border-color 0.2s, background 0.2s;
+  position: relative;
+}
+
+.featured-card:hover {
+  border-color: var(--accent);
+  background: #fdfcfa;
+}
+
+.featured-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.875rem;
+}
+
+.featured-ticker {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.06em;
+}
+
+.featured-rating {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: #1a5c38;
+  background: #e8f5ed;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  letter-spacing: 0.06em;
+}
+
+.featured-date {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+}
+
+.featured-card h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+  letter-spacing: -0.01em;
+}
+
+.featured-card p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.65;
+  margin-bottom: 1.25rem;
+  max-width: 480px;
+}
+
+.featured-link {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.06em;
+}
