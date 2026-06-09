@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&display=swap');
+
 /* ─── RESET & BASE ────────────────────── */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -76,7 +78,7 @@ body {
   cursor: pointer;
 }
 
-/* ─── HERO ────────────────────────────── */
+/* ─── HERO ─────────────────────────────── */
 .site-header { border-bottom: 1px solid var(--border); }
 
 .hero {
@@ -105,7 +107,7 @@ body {
 }
 
 .hero h1 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: clamp(2.2rem, 5vw, 3.8rem);
   font-weight: 700;
   line-height: 1.1;
@@ -154,21 +156,21 @@ body {
   transform: translateY(-1px);
 }
 
-/* ─── SECTIONS ────────────────────────── */
+/* ─── SECTIONS ─────────────────────────── */
 .section {
   padding: 3rem 0;
   border-top: 1px solid var(--border);
 }
 
 .section h2 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 1.5rem;
   letter-spacing: -0.015em;
 }
 
-/* ─── CARDS ───────────────────────────── */
+/* ─── CARDS ─────────────────────────────── */
 .cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -215,9 +217,9 @@ body {
 }
 
 .card h3 {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 1.05rem;
-  font-weight: 600;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 700;
   margin-bottom: 0.35rem;
   letter-spacing: -0.01em;
 }
@@ -229,6 +231,12 @@ body {
 }
 
 /* ─── FEATURED REPORT ─────────────────── */
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
 .featured-card {
   display: block;
   padding: 1.75rem;
@@ -237,7 +245,6 @@ body {
   border-radius: calc(var(--radius) + 3px);
   text-decoration: none;
   color: var(--text);
-  max-width: 560px;
   transition: border-color 0.2s, background 0.2s;
 }
 
@@ -264,11 +271,25 @@ body {
 .featured-rating {
   font-family: 'DM Mono', monospace;
   font-size: 0.62rem;
+  padding: 0.18rem 0.45rem;
+  border-radius: 3px;
+  letter-spacing: 0.06em;
+}
+
+.rating-buy {
   color: #1a5c38;
   background: #e8f5ed;
   padding: 0.18rem 0.45rem;
   border-radius: 3px;
-  letter-spacing: 0.06em;
+  display: inline-block;
+}
+
+.rating-hold {
+  color: #7a5c1a;
+  background: #fdf3dc;
+  padding: 0.18rem 0.45rem;
+  border-radius: 3px;
+  display: inline-block;
 }
 
 .featured-date {
@@ -278,9 +299,9 @@ body {
 }
 
 .featured-card h3 {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 700;
   margin-bottom: 0.5rem;
   letter-spacing: -0.01em;
 }
@@ -300,7 +321,7 @@ body {
   letter-spacing: 0.06em;
 }
 
-/* ─── ABOUT ───────────────────────────── */
+/* ─── ABOUT ─────────────────────────────── */
 #about p {
   font-size: 0.95rem;
   color: var(--muted);
@@ -308,7 +329,7 @@ body {
   line-height: 1.8;
 }
 
-/* ─── FOOTER ──────────────────────────── */
+/* ─── FOOTER ─────────────────────────────── */
 .footer-inner {
   padding: 1.5rem 2.5rem;
   border-top: 1px solid var(--border);
@@ -321,13 +342,13 @@ body {
   color: var(--muted);
 }
 
-/* ─── ANIMATIONS ──────────────────────── */
+/* ─── ANIMATIONS ─────────────────────────── */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(10px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ─── RESPONSIVE ──────────────────────── */
+/* ─── RESPONSIVE ─────────────────────────── */
 @media (max-width: 640px) {
   .nav {
     padding: 1.25rem 1.5rem;
@@ -362,28 +383,7 @@ body {
 
   .cards { grid-template-columns: 1fr; }
 
+  .featured-grid { grid-template-columns: 1fr; }
+
   .section { padding: 2.25rem 0; }
-}
-
-/* ─── FEATURED GRID ───────────────────── */
-.featured-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-}
-
-.rating-hold {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.62rem;
-  color: #7a5c1a;
-  background: #fdf3dc;
-  padding: 0.18rem 0.45rem;
-  border-radius: 3px;
-  letter-spacing: 0.06em;
-}
-
-@media (max-width: 640px) {
-  .featured-grid {
-    grid-template-columns: 1fr;
-  }
 }
