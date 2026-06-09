@@ -356,6 +356,19 @@ body {
 }
 
 /* ─── FEATURED REPORT ─────────────────── */
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+
+@media (max-width: 640px) {
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .featured-card {
   display: block;
   padding: 2rem;
@@ -364,7 +377,6 @@ body {
   border-radius: calc(var(--radius) + 3px);
   text-decoration: none;
   color: var(--text);
-  max-width: 580px;
   transition: border-color 0.2s, background 0.2s;
   position: relative;
 }
