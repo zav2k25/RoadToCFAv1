@@ -364,3 +364,26 @@ body {
 
   .section { padding: 2.25rem 0; }
 }
+
+/* ─── FEATURED GRID ───────────────────── */
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.rating-hold {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.62rem;
+  color: #7a5c1a;
+  background: #fdf3dc;
+  padding: 0.18rem 0.45rem;
+  border-radius: 3px;
+  letter-spacing: 0.06em;
+}
+
+@media (max-width: 640px) {
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+}
