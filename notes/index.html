@@ -34,9 +34,7 @@
       transition: background 0.15s;
     }
 
-    .research-table tbody tr:hover {
-      background: var(--surface-2);
-    }
+    .research-table tbody tr:hover { background: var(--surface-2); }
 
     .research-table td {
       padding: 1.25rem 1rem 1.25rem 0;
@@ -83,6 +81,14 @@
       display: inline-block;
     }
 
+    .rating-hold {
+      color: #7a5c1a;
+      background: #fdf3dc;
+      padding: 0.2rem 0.5rem;
+      border-radius: 3px;
+      display: inline-block;
+    }
+
     .col-thesis {
       font-size: 0.875rem;
       color: var(--muted);
@@ -114,10 +120,7 @@
     }
 
     @media (max-width: 640px) {
-      .col-sector,
-      .col-rating {
-        display: none;
-      }
+      .col-sector, .col-rating { display: none; }
     }
   </style>
 </head>
@@ -128,16 +131,16 @@
     <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="menu">☰</button>
     <ul id="menu" class="menu">
       <li><a href="../index.html">Home</a></li>
-      <li><a href="../index.html#guides">CFA Guides</a></li>
       <li><a href="index.html">Research</a></li>
       <li><a href="../thematic/index.html">Thematic</a></li>
+      <li><a href="../blog/index.html">Blog</a></li>
+      <li><a href="../index.html#guides">CFA Guides</a></li>
       <li><a href="../index.html#about">About</a></li>
     </ul>
   </nav>
   <section class="hero container">
     <p class="hero-eyebrow">Equity Research</p>
     <h1>Research</h1>
-    <p class="hero-sub">Equity research notes. Each covers a company's business model, financial position, and investment case.</p>
   </section>
 </header>
 
@@ -157,22 +160,31 @@
       <tbody>
 
         <tr>
+          <td class="col-date">Apr 2026</td>
+          <td class="col-ticker">ASTS</td>
+          <td class="col-sector">Technology</td>
+          <td class="col-rating"><span class="rating-hold">HOLD</span></td>
+          <td class="col-thesis">Scenario-based analysis of a pre-commercial satellite broadband business with significant optionality and execution risk.</td>
+          <td class="col-link"><a href="ASTS_Equity_Note1.pdf" target="_blank" rel="noopener">View Report</a></td>
+        </tr>
+
+        <tr>
           <td class="col-date">Mar 2026</td>
           <td class="col-ticker">AMZN</td>
           <td class="col-sector">Technology</td>
           <td class="col-rating"><span class="rating-buy">BUY</span></td>
           <td class="col-thesis">AWS reacceleration, advertising flywheel, and Anthropic partnership underpin a $256 price target.</td>
-          <td class="col-link"><a href="pdfs/AMZN_MARCH.pdf" target="_blank" rel="noopener">View ↗</a></td>
+          <td class="col-link"><a href="AMZN_MARCH.pdf" target="_blank" rel="noopener">View Report</a></td>
         </tr>
 
-        <!-- Add future reports below this line:
+        <!-- Add future reports here:
         <tr>
           <td class="col-date">Mon YYYY</td>
           <td class="col-ticker">TICK</td>
           <td class="col-sector">Sector</td>
           <td class="col-rating"><span class="rating-buy">BUY</span></td>
           <td class="col-thesis">One-line thesis.</td>
-          <td class="col-link"><a href="pdfs/filename.pdf" target="_blank" rel="noopener">View ↗</a></td>
+          <td class="col-link"><a href="filename.pdf" target="_blank" rel="noopener">View Report</a></td>
         </tr>
         -->
 
